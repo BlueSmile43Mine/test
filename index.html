@@ -2,34 +2,7 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#loginform').submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: 'data.php',
-            data: $(this).serialize(),
-            success: function(response)
-            {
-                var jsonData = JSON.parse(response);
-  
-                // user is logged in successfully in the back-end
-                // let's redirect
-                if (jsonData.success == "1")
-                {
-                    alert('valid working');
-
-                }
-                else
-                {
-                    alert('Invalid Credentials!');
-                }
-           }
-       });
-     });
-});
-</script>
+<script src="script.js"></script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
